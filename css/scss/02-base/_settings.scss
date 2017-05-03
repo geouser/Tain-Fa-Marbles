@@ -13,12 +13,30 @@ body {
   font-size: 20px;
 }
 
+.section-title {
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+  &--border {
+    border-top: 1px solid #C7C4C2;
+  }
+  h1,
+  h2 {
+    font-size: 40px;
+    font-weight: 300;
+  }
+}
+
+
 // lAYOUT
 // ---------------------------
 .wrapper {
 	width: 1200px;
 	margin: 0 auto;
 	text-align: center;
+  &--full {
+    width: 1600px;
+  }
 }
 
 
