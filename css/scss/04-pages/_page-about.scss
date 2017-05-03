@@ -1,8 +1,11 @@
 .about-section {
     article {
         text-align: left;
-        columns: 2;
-        column-gap: 20px;
+
+        @media (min-width: 768px) {
+            columns: 2;
+            column-gap: 20px;    
+        }
 
         p:not(:last-child) {
             margin-bottom: 26px;

@@ -36,11 +36,11 @@
 
 @font-face {
     font-family: 'Segoe UI';
-    src: url('subset-SegoeUI-Semilight.eot');
-    src: url('subset-SegoeUI-Semilight.eot?#iefix') format('embedded-opentype'),
-        url('subset-SegoeUI-Semilight.woff') format('woff'),
-        url('subset-SegoeUI-Semilight.ttf') format('truetype'),
-        url('subset-SegoeUI-Semilight.svg#SegoeUI-Semilight') format('svg');
+    src: url('../fonts/subset-SegoeUI-Semilight.eot');
+    src: url('../fonts/subset-SegoeUI-Semilight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/subset-SegoeUI-Semilight.woff') format('woff'),
+         url('../fonts/subset-SegoeUI-Semilight.ttf') format('truetype'),
+         url('../fonts/subset-SegoeUI-Semilight.svg#SegoeUI-Semilight') format('svg');
     font-weight: 300;
     font-style: normal;
 }

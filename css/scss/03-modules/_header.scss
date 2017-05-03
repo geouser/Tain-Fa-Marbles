@@ -109,6 +109,11 @@
     display: block;
     position: relative;
     z-index: 2;
+
+    @media (max-width: 1550px) and (min-width: 1201px) {
+        width: 120px;
+    }
+    
     img {
         display: block;
         max-width: 100%;
