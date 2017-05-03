@@ -66,3 +66,29 @@
         }
     }
 }
+
+.products-categories {
+    margin-bottom: 40px;
+    padding: 0 22px;
+    a {
+        width: 100%;
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        border: 1px solid #BCB0AD;
+        margin: 10px 0;
+        text-transform: uppercase;
+        padding-left: 14%;
+        padding-right: 5%;
+        text-align: left;
+        color: #BCB0AD;
+        @include transition(all, .2s);
+        &:hover,
+        &.active {
+            color: #FFF;
+            background-color: #BCB0AD;
+        }
+    }
+}
