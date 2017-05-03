@@ -157,27 +157,14 @@ jQuery(document).ready(function($) {
         var lat = $('#map_canvas').data('lat');
         var long = $('#map_canvas').data('lng');
 
-        var mapCenterCoord = new google.maps.LatLng(lat, long+0.002);
+        var mapCenterCoord = new google.maps.LatLng(lat, long);
         var mapMarkerCoord = new google.maps.LatLng(lat, long);
-        if ( $(window).width() <= 1000 ) {
-            mapCenterCoord = new google.maps.LatLng(lat, long);
-            mapMarkerCoord = new google.maps.LatLng(lat, long);
-        }
-        $(window).resize(function(event) {
-            if ( $(window).width() <= 1000 ) {
-                mapCenterCoord = new google.maps.LatLng(lat, long);
-                mapMarkerCoord = new google.maps.LatLng(lat, long);
-            } else {
-                mapCenterCoord = new google.maps.LatLng(lat, long+0.002);
-                mapMarkerCoord = new google.maps.LatLng(lat, long);
-            }
-        });
 
         var mapOptions = {
             center: mapCenterCoord,
-            zoom: 17,
+            zoom: 13,
             //draggable: false,
-            disableDefaultUI: true,
+            disableDefaultUI: false,
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -188,7 +175,7 @@ jQuery(document).ready(function($) {
             icon: markerImage,
             position: mapMarkerCoord, 
             map: map,
-            title:"Чисто Строй"
+            title:"Tian Fa Mables"
         });
         
         $(window).resize(function (){
