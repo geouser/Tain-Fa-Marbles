@@ -1,6 +1,10 @@
 .map_canvas {
     height: 550px;
 
+    @media (max-width: 1620px) {
+        height: 400px;
+    }
+
     .gm-style a img,
     .gmnoprint a,
     .gmnoprint a + span,
@@ -56,14 +60,18 @@
 
 
 .contact-form {
-    .flex-row {
-        margin: 0 -30px;
-    }
 
-    .col-6,
-    .col-12 {
-        padding: 0 30px;
+    @media (min-width: 1651px) {
+        .flex-row {
+            margin: 0 -30px;
+        }
+
+        .col-6,
+        .col-12 {
+            padding: 0 30px;
+        }    
     }
+    
 
 
 
