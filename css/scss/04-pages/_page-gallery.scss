@@ -1,0 +1,53 @@
+.gallery-grid {
+    margin: 0 -32px -64px;
+
+    .gallery-item {
+        padding: 0 32px;
+        margin-bottom: 64px;
+
+        a,
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
+
+.pagination {
+    padding: 45px 0;
+    text-align: center;
+
+    .current,
+    .page,
+    .previouspostslink,
+    .nextpostslink {
+        display: inline-block;
+        font-size: 20px;
+        color: #1a1a1a;
+        padding: 0 5px;
+        vertical-align: baseline;
+    }
+
+    .current {
+        opacity: 0.5;
+    }
+
+    .previouspostslink,
+    .nextpostslink {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-size: 24px;
+    }
+
+    .previouspostslink:after {
+        content: "\f104";
+    }
+    .nextpostslink:after {
+        content: "\f105";
+    }
+}
