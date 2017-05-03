@@ -14,10 +14,19 @@
     
     display: inline-block;
     cursor: pointer;
+    @include transition(all, .2s);
+    &:hover {
+        background-color: #F24841;
+        color: #FFF;
+    }
     &--black {
         border-color: #000;
         background-color: #000;
         color: #fff;
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
     }
     &--small {
         font-size: 16px;
