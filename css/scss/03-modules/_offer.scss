@@ -1,5 +1,4 @@
 .offer {
-    height: 800px;
     max-height: 100%;
     @include flex($direction: column, $alignI: center, $justify: center);
     
@@ -8,59 +7,67 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
-    
     h1 {
-        margin-bottom: 40px;
-        text-transform: uppercase;
+        font-size: 48px;
+        font-weight: 600;
+        &:after {
+            display: block;
+            content: "";
+            margin: 14px 0;
+            height: 1px;
+            background-color: #4a4644;
+            width: 140px;
+        }
+    }
+    p {
+        font-size: 24px;
+        font-weight: 300;
+        color: #2A2A2A;
     }
 }
-
-/*
-.offer--slider {
-    height: 590px;
-    position: relative;
-    background: #3D8EB9;
-    @media (max-width: 600px) {
-        height: 500px;
-    }
-    .slick-track,
-    .slick-list {
-        height: 100%;
-    }
-    .slide {
-        @include flex($direction:column,$alignI:center, $justify:center);
-        position: absolute;
-        left: 0;
-        top: 0;
+    .offer-grid {
         width: 100%;
         height: 100%;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-             -o-background-size: cover;
-                background-size: cover;
-        @media (max-width: 800px) {
-            padding: 0 30px;
-        }
-        h1,
-        h2 {
-            color: #fff;
-            font-size: 50px;
-            font-weight: 700;
-             text-align: center;
-            @media (max-width: 1200px) {
-                font-size: 40px;
+        height: 760px;
+        .flex-row {
+            &--6 {
+                height: 60%;
             }
-            @media (max-width: 800px) {
-                font-size: 32px;
+            &--4 {
+                height: 40%;
             }
-            @media (max-width: 600px) {
-                font-size: 30px;
+            > div {
+                height: 100%;
             }
         }
-        .button {
-            margin-top: 16px;
+        &__item {
+            height: 100%;
+            background-position: 50% 50%;
+            -webkit-background-size: cover;
+                 -o-background-size: cover;
+                    background-size: cover;
+            &--main {
+                height: 100%;
+                padding-left: 5%;
+                padding-right: 20%;
+                padding-bottom: 45px;
+                @include flex($direction: column, $justify: flex-end);
+            }
+            &--text {
+                background: #4a4644 !important;
+                text-align: center;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+                p {
+                    color: #fff;
+                    display: inline-block;
+                    vertical-align: middle;
+                    max-width: 97%;
+                }
+            }
         }
     }
-}
-*/
