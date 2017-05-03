@@ -54,11 +54,9 @@
     }
     &__info {
         width: 100%;
-        position: absolute;
+        position: static;
         left: 0;
         padding-bottom: 20px;
-        top: -webkit-calc(100% - 90px);
-        top: calc(100% - 90px);
         background-color: #FFF;
         @include transition(all, .2s);
         &__title {
@@ -99,8 +97,12 @@
     }
     &:hover {
         .product-card__info {
-            top: auto;
-            bottom: 0;
+            margin-top: 90px;
+            -webkit-transform: translateY(-100%);
+               -moz-transform: translateY(-100%);
+                -ms-transform: translateY(-100%);
+                 -o-transform: translateY(-100%);
+                    transform: translateY(-100%);
         }
     }
 }
