@@ -1,0 +1,185 @@
+.site-footer {
+    background-color: #262423;
+    color: #fff;
+
+
+    .footer-top {
+        position: relative;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        padding: 40px 0;
+
+        @media (max-width: 1650px) {
+            border-width: 50px;
+        }
+
+        @media (max-width: 1450px) {
+            border-width: 0px;
+            padding: 20px 0 30px;
+        }
+
+        .flex-row {
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            margin: 0;
+        }
+    }
+
+
+    .footer-bottom {
+        background-color: #F4F1EF;
+        text-align: center;
+        color: #262423;
+        font-weight: 300;
+        padding: 11px 0 12px;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    .footer-logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 200px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        @media (max-width: 1650px) {
+            width: 150px;
+        }
+
+        @media (max-width: 1450px) {
+            position: static;
+            width: 100%;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+            margin-bottom: 20px;
+
+            a {
+                display: block;
+                width: 150px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .footer-socials {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin: 0 -15px;
+
+        a {
+            color: #fff;
+            font-size: 38px;
+            margin: 0 15px;
+            display: inline-block;
+
+            &:hover {
+                .fa-facebook {
+                    color: #3B5998;
+                }
+
+                .fa-instagram {
+                    background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+
+
+    .footer-phone,
+    .footer-location {
+        text-transform: uppercase;
+        color: #fff;
+
+        a {
+            color: inherit;
+            display: inline-block;
+            vertical-align: middle;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 16px;
+        }
+    }
+
+
+    .footer-phone,
+    .footer-request,
+    .footer-location {
+        width: 33.33%;
+        padding: 0 75px;
+        text-align: center;
+    }
+
+    @media (max-width: 1450px) {
+        .footer-socials {
+            -webkit-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+            position: static;
+        }
+        .footer-phone,
+        .footer-request,
+        .footer-location,
+        .footer-socials {
+            padding: 0 10px;
+            width: 25%;
+        }
+    }
+
+
+    .request-button {
+        height: 60px;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        width: 220px;
+        max-width: 100%;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        @media (max-width: 1450px) {
+            height: 40px;
+        }
+
+        &:hover {
+            color: #262423;
+            background-color: #fff;
+        }
+    }
+}

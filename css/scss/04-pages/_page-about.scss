@@ -1,0 +1,28 @@
+.about-section {
+    article {
+        text-align: left;
+        columns: 2;
+        column-gap: 20px;
+
+        p:not(:last-child) {
+            margin-bottom: 26px;
+        }
+    }
+
+    .about-gallery {
+        padding: 45px 0;
+        
+        .flex-row {
+            margin: 0 -3px;
+        }
+
+        .col-4 {
+            padding: 0 3px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
