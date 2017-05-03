@@ -42,6 +42,10 @@ body {
 
   &--full {
     width: 1600px;
+
+    @media (max-width: 1650px) {
+      width: 1200px;
+    }
   } 
 }
 
