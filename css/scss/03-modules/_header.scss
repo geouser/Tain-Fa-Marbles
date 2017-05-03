@@ -60,6 +60,39 @@
                 font-weight: 300;
                 font-size: 24px;
                 display: block;
+                &:before,
+                &:after {
+                    display: inline-block;
+                    opacity: 0;
+                    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+                    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+                    transition: transform 0.3s, opacity 0.2s;
+                    position: relative;
+                    top: -2px;
+                }
+                &:before {
+                    margin-right: 10px;
+                    content: '[';
+                    -webkit-transform: translateX(20px);
+                    -moz-transform: translateX(20px);
+                    transform: translateX(20px);
+                }
+                &:after {
+                    margin-left: 10px;
+                    content: ']';
+                    -webkit-transform: translateX(-20px);
+                    -moz-transform: translateX(-20px);
+                    transform: translateX(-20px);
+                }
+                &:hover::before,
+                &:hover::after,
+                &:focus::before,
+                &:focus::after {
+                    opacity: 1;
+                    -webkit-transform: translateX(0px);
+                    -moz-transform: translateX(0px);
+                    transform: translateX(0px);
+                }
             }
         }
     }
@@ -67,6 +100,7 @@
         margin-bottom: 40px;
     }
 }
+
 
 .logo {
     color: #000;
@@ -104,7 +138,7 @@
     display: none;
     width: 40px;
     height: 40px;
-    @include position(fixed, 15px, 15px, auto, auto);
+    @include position(fixed, 15px, 10px, auto, auto);
     margin: auto; 
     cursor: pointer;
     z-index: 100;
