@@ -1,5 +1,12 @@
 .map_canvas {
     height: 550px;
+
+    .gm-style a img,
+    .gmnoprint a,
+    .gmnoprint a + span,
+    .gm-style-cc {
+        display: none!important;
+    }
 }
 
 .contact-info {
