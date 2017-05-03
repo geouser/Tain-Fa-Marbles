@@ -75,6 +75,34 @@
             }
         }
         &__details {
+            .detailed-link {
+                font-weight: 600;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: #bcb0ad;
+                margin-top: 15px;
+                position: relative;
+                display: inline-block;
+                -webkit-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    position: absolute;
+                    top: -15px;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #bcb0ad;
+                }
+
+                &:hover {
+                    color: #F24841;
+                }
+            }
+
             strong {
                 display: block;
                 font-size: 16px;

@@ -24,7 +24,7 @@
        
         <!--=================================================================================================-->
                                                     <!-- HEADER -->
-        <header class="mainHeader compensate-for-scrollbar">
+        <header class="mainHeader">
             <div class="wrapper">
 
                 <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
@@ -39,7 +39,7 @@
                     </ul>
                 </nav><!-- end nav -->
 
-                <button class="button button--small button--black">Request a call</button>
+                <button href="#modal-popup" class="button button--small button--black fancybox">Request a call</button>
 
             </div><!-- end wrapper -->
         </header><!-- end header -->
@@ -264,7 +264,30 @@
             </div>
         </footer>
 
-        <div id="modal-popup" class="fncb-hide popup"></div>
+        <div id="modal-popup" class="fncb-hide popup">
+            <div class="popup-heading">Contact us!</div>
+
+            <div class="popup-body">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" placeholder="Your Contact Phone" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="email" placeholder="Your Email" required="">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group button-group">
+                        <button class="button button--red">Send</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <div id="modal-popup-ok" class="fncb-hide popup result">
             <p class="heading">Спасибо!</p>
