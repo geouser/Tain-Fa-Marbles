@@ -7,6 +7,15 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+}
+.offer-grid {
+    width: 100%;
+    height: 100%;
+    height: 760px;
+    margin: 0;
+    [class*='col-'] {
+        padding: 0;
+    }
     h1 {
         font-size: 48px;
         font-weight: 600;
@@ -24,50 +33,119 @@
         font-weight: 300;
         color: #2A2A2A;
     }
-}
-    .offer-grid {
-        width: 100%;
+    .flex-row {
+         margin: 0;
+        &--3 {
+            height: 30%;
+        }
+        &--35 {
+            height: 35%;
+        }
+        &--4 {
+            height: 40%;
+        }
+        &--5 {
+            height: 50%;
+        }
+        &--6 {
+            height: 60%;
+        }
+        &--65 {
+            height: 65%;
+        }
+        &--7 {
+            height: 70%;
+        }
+        > div {
+            height: 100%;
+        }
+    }
+    &__item {
+        position: relative;
         height: 100%;
-        height: 760px;
-        .flex-row {
-            &--6 {
-                height: 60%;
-            }
-            &--4 {
-                height: 40%;
-            }
-            > div {
+        background-position: 50% 50%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        &--main {
+            height: 100%;
+            padding-left: 5% !important;
+            padding-right: 20% !important;
+            padding-bottom: 45px !important;
+            @include flex($direction: column, $justify: flex-end);
+        }
+        &--text {
+            background: #4a4644 !important;
+            text-align: center;
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
                 height: 100%;
+            }
+            p {
+                color: #fff;
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 97%;
             }
         }
-        &__item {
+        a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
             height: 100%;
-            background-position: 50% 50%;
-            -webkit-background-size: cover;
-                 -o-background-size: cover;
-                    background-size: cover;
-            &--main {
+            text-align: center;
+            background: #837873 !important;
+            @include transition(all, .2s);
+            opacity: 0;
+            visibility: hidden;
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
                 height: 100%;
-                padding-left: 5%;
-                padding-right: 20%;
-                padding-bottom: 45px;
-                @include flex($direction: column, $justify: flex-end);
             }
-            &--text {
-                background: #4a4644 !important;
-                text-align: center;
-                &:before {
+            span {
+                color: #fff;
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 97%;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 20px;
+                &:after {
                     content: "";
                     display: inline-block;
                     vertical-align: middle;
-                    height: 100%;
-                }
-                p {
-                    color: #fff;
-                    display: inline-block;
-                    vertical-align: middle;
-                    max-width: 97%;
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 10px;
+                    position: relative;
+                    top: -2px;
+                    background-image: url("../images/right-arrow.svg");
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    -webkit-background-size: 100% auto;
+                         -o-background-size: 100% auto;
+                            background-size: 100% auto;
                 }
             }
         }
+        &:hover {
+            > a {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
+    &--gallery {
+        height: 900px;
+        .flex-row {
+            [class*='col-'] {
+                border: 5px solid #fff;
+            }
+        }
+    }
+}
